@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проєкт карток</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+
+    <!-- header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">🔪 BladeMaster</div>
+            <nav>
+                <a href="/shop/shop.html" class="shop-btn">🛒 До магазину</a>
+                <a href="/home/home.html" class="shop-btn">🏠 Головна</a>
+                <a href="/team/team.html" class="shop-btn">👨‍👦‍👦 Команда</a>
+            </nav>
+            <div class="info">
+                <div class="socials">
+                    <a href="#" class="social-link"><img class="social-img" src="/img/facebook.png" alt="Facebook"></a>
+                    <a href="#" class="social-link"><img class="social-img" src="/img/instagram.png" alt="Instagram"></a>
+                    <a href="#" class="social-link"><img class="social-img" src="/img/twitter.png" alt="Twitter"></a>
+                </div>
+            </div>
+            <div class="log">
+                <button id="loginBtn" class="shop-btn">Login</button>
+                <button id="registerBtn" class="shop-btn">Register</button>
+            </div>
+        </div>
+    </header>
+    <!-- audio prikol  -->
+    <audio controls class="audio-prikol" >
+        <source src="/img/meme-song.mp3" type="audio/mpeg">
+        Ваш браузер не поддерживает аудио.
+    </audio>
+
+    <!-- Main Section -->
+<section class="main-content animated-block">
+    <div class="container ">
+        <h1>Знайдіть свій ідеальний ніж</h1>
+        <p>Найкращі ножі для кожного — від професійних кухарів до аматорів. Виберіть свій ніж з нашої колекції високоякісних виробів!</p>
+        <a href="/shop/shop.html"><button class="shop-btn-main">Перейти до магазину</button></a>
+    </div>
+</section>
+
+<!-- Product Section -->
+<section class="product-section animated-block">
+    <h2>Наші популярні ножі</h2>
+    <div class="container">
+        <div class="product-cards">
+            <div class="product-card">
+                <img src="/img/home/home-knife1.jpg" alt="Ніж 1">
+                <h3>Ніж BladeMaster Pro</h3>
+                <p>Ідеальний для кухарів, які шукають якість та точність. Зручний у використанні і довговічний.</p>
+                <span>₴1500</span>
+                <button class="shop-btn">Купити</button>
+            </div>
+            <div class="product-card">
+                <img src="/img/home/knife for meat.webp" alt="Ніж 2">
+                <h3>Ніж для м'яса</h3>
+                <p>Ніж, який легко справляється з будь-якими видами м'яса. Ріжте професійно та без зусиль!</p>
+                <span>₴1200</span>
+                <button class="shop-btn">Купити</button>
+            </div>
+            <div class="product-card">
+                <img src="/img/home/knife for fish.webp" alt="Ніж 3">
+                <h3>Ніж для риби</h3>
+                <p>Легкий та гострий, ідеальний для точних рухів при нарізанні риби.</p>
+                <span>₴900</span>
+                <button class="shop-btn">Купити</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="about-section animated-block">
+    <div class="container ">
+        <h2>Про нас</h2>
+        <p>Ми спеціалізуємося на виробництві та продажу високоякісних ножів для професіоналів та любителів. Наші ножі створені з найкращих матеріалів, щоб кожен користувач міг насолоджуватися ідеальними результатами.</p>
+        <a href="/team/team.html"><button class="shop-btn-main">Дізнатися більше</button></a>
+    </div>
+</section>
+
+<!-- footer -->
+<footer class="footer">
+    <p>&copy; 2025 BladeMaster. Всі права захищено.</p>
+</footer>
+
+<script src="modal.js"></script>
+
+     <!-- Модальні вікна -->
+     <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('loginModal')">&times;</span>
+            <h2>Вхід</h2>
+            <input type="text" placeholder="E-mail">
+            <input type="password" placeholder="Пароль">
+            <button onclick="submitForm('login')">Увійти</button>
+        </div>
+    </div>
+
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('registerModal')">&times;</span>
+            <h2>Реєстрація</h2>
+            <input type="text" placeholder="E-mail">
+            <input type="password" placeholder="Пароль">
+            <input type="password" placeholder="Підтвердіть пароль">
+            <button onclick="submitForm('register')">Зареєструватися</button>
+        </div>
+    </div>
+</body>
+</html>
