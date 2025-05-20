@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Новини</title>
+ <link rel="stylesheet" href="news.css"/>
+</head>
+<body>
+    <!-- header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">🔪 BladeMaster</div>
+            <nav>
+                <a href="/shop/shop.html" class="shop-btn">🛒 До магазину</a>
+                <a href="/home/home.html" class="shop-btn">🏠 Головна</a>
+                <a href="/team/team.html" class="shop-btn">👨‍👦‍👦 Команда</a>
+                <a href="/news/news.html" class="shop-btn">👨‍👦‍👦 Новини</a>
+                <a href="/shop/graphs.html" class="shop-btn">👨‍👦‍👦 Графіки</a>
+            </nav>
+            <div class="info">
+                <div class="socials">
+                    <a href="#" class="social-link"><img class="social-img" src="/img/facebook.png" alt="Facebook"></a>
+                    <a href="#" class="social-link"><img class="social-img" src="/img/instagram.png" alt="Instagram"></a>
+                    <a href="#" class="social-link"><img class="social-img" src="/img/twitter.png" alt="Twitter"></a>
+                </div>
+            </div>
+            <div class="log">
+                <button id="loginBtn" class="shop-btn">Login</button>
+                <button id="registerBtn" class="shop-btn">Register</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-content">
+        <div id="news-list" aria-label="Список новин"></div>
+        <button id="scrollTopBtn" title="Вгору" aria-label="Прокрутити вверх">⬆️</button>
+        <div id="news-detail" aria-live="polite" aria-atomic="true" style="display:none;"></div>
+    </div>
+
+    <script src="news.js"></script>
+
+    <!-- footer -->
+    <footer class="footer">
+        <p>&copy; 2025 BladeMaster. Всі права захищено.</p>
+    </footer>
+</body>
+</html>

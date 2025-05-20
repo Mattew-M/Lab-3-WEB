@@ -33,31 +33,25 @@
   </div>
 </header>
 
-<div class="filter-panel">
-  <label for="sortPrice">Сортувати за ціною:</label>
-  <select id="sortPrice">
-    <option value="default">Без сортування</option>
-    <option value="asc">За зростанням</option>
-    <option value="desc">За спаданням</option>
-    <option value="rating-desc">Рейтинг: від високого до низького</option>
-    <option value="rating-asc">Рейтинг: від низького до високого</option>
+
+<div class="graphs-section">
+  <h2>📊 Оберіть графік для перегляду</h2>
+  <select id="chartSelector">
+    <option value="bar">Гістограма середнього рейтингу</option>
+    <option value="pie">Кругова діаграма по категоріях</option>
+    <option value="line">Лінійний графік рейтингів</option>
   </select>
 
-  <div style="margin-top: 10px;">
-    <label for="category">Категорія:</label>
-    <select id="category">
-      <option value="all">Усі</option>
-      <option value="hunting">Мисливські</option>
-      <option value="tourism">Туристичні</option>
-      <option value="tactical">Тактичні</option>
-      <option value="folding">Складні</option>
-      <option value="kitchen">Кухонні</option>
-    </select>
+  <div class="chart-container" id="barChartContainer">
+    <canvas id="barChart"></canvas>
+  </div>
+  <div class="chart-container" id="pieChartContainer" style="display: none;">
+    <canvas id="pieChart"></canvas>
+  </div>
+  <div class="chart-container" id="lineChartContainer" style="display: none;">
+    <canvas id="lineChart"></canvas>
   </div>
 </div>
-
-<div id="card-container" class="card-container"></div>
-<button id="load-more" class="load-more">Завантажити ще</button>
 
 <div class="footer-div">
   <footer class="footer">
@@ -87,26 +81,6 @@
   </div>
 </div>
 
-<!-- Підписка -->
-<div id="subscribePopup" class="popup">
-  <div class="modal-content">
-    <span class="close" onclick="closeModal('subscribePopup')">&times;</span>
-    <h2>Підписка на новини</h2>
-    <input type="email" placeholder="Введіть ваш email"/>
-    <button id="accept-subscription">Підписатися</button>
-    <button id="decline-subscription">Відхилити</button>
-  </div>
-</div>
-
-<!-- Реклама -->
-<div id="adPopup" class="ad-popup">
-  <div class="modal-content">
-    <span class="close" id="close-ad">&times;</span>
-    <h2>Спеціальна пропозиція!</h2>
-    <p>Скористайся знижкою -20% лише сьогодні!</p>
-    <button id="close-ad">Закрити</button>
-  </div>
-</div>
 
 <!-- Корзина -->
 <div id="cartModal" class="modal">

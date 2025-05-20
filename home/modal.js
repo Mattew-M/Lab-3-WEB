@@ -9,20 +9,39 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function openModal(modalId) {
         const modal = document.getElementById(modalId);
-        modal.classList.add("open");  // Додаємо клас для анімації
-        modal.style.display = "flex"; // Робимо модальне вікно видимим
+        modal.classList.add("open");
+        modal.style.display = "flex";
     }
 
     window.closeModal = function (modalId) {
         const modal = document.getElementById(modalId);
-        modal.classList.remove("open");  // Відбираємо клас анімації
+        modal.classList.remove("open");
         setTimeout(() => { 
-            modal.style.display = "none"; // Прибираємо модальне вікно після анімації
-        }, 300); // Час, на який анімація триває
+            modal.style.display = "none";
+        }, 300);
     }
 
     window.submitForm = function (type) {
         alert(type === "login" ? "Вхід успішний!" : "Реєстрація успішна!");
         closeModal(type === "login" ? "loginModal" : "registerModal");
     }
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const scrollTopBtn = document.getElementById('scrollTopBtn');
+
+  window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY || document.documentElement.scrollTop;
+
+    if (scrollY > 50) {
+      scrollTopBtn.style.display = 'block';
+    } else {
+      scrollTopBtn.style.display = 'none';
+    }
+  });
+
+  scrollTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
 });
